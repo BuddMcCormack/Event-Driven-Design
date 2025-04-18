@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         GetInput();
         Looking();
+       
     }
 
     private void FixedUpdate()
@@ -51,4 +52,5 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(transform.position + transform.forward * Speed * Time.deltaTime);
 
     }
+
 }

@@ -16,7 +16,10 @@ public class Coin : MonoBehaviour
     // If anything collides with a coin, pickup the coin.
     private void OnTriggerEnter(Collider other)
     {
-        onCollected?.Invoke();
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            onCollected?.Invoke();
+            Destroy(gameObject);
+        }
     }
 }
